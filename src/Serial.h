@@ -6,6 +6,8 @@
 class HardwareSerial : public Stream {
 public:	
 	void begin(uint32_t) {}
+    void write (uint8_t inValue) override {
+    }
 };
 
 struct Serial_ : public HardwareSerial {};

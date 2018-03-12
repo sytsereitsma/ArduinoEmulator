@@ -1,4 +1,6 @@
 #include "Arduino.h"
+#include <chrono>
+#include <thread>
 
 uint8_t TCCR1A;
 uint8_t TCCR1B;
@@ -16,8 +18,13 @@ void analogReference(Reference) {
 
 }
 
-void delay(uint32_t) {}
-void delayMicroseconds(uint32_t) {}
+void delay(uint32_t inMS) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(inMS));
+}
+
+void delayMicroseconds(uint32_t inUS) {
+    std::this_thread::sleep_for(std::chrono::microseconds(inUS));
+}
 
 void pinMode (int, PinMode) {
 
