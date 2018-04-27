@@ -5,14 +5,11 @@
 
 class HardwareSerial : public Stream {
 public:	
-	void begin(uint32_t) {}
-    void write (uint8_t inValue) override {
-    }
+	virtual void begin(uint32_t /*inBaudrate*/) {}
+    void write (uint8_t /*inValue*/) override {}
 };
 
-struct Serial_ : public HardwareSerial {};
-
-extern Serial_ Serial; 
+extern HardwareSerial Serial; 
 extern HardwareSerial Serial1; 
 
 #endif// __SERIAL_H_

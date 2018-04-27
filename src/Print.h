@@ -1,6 +1,7 @@
 #ifndef PRINT_H__
 #define PRINT_H__
 #include <sstream>
+#include <cstdint>
 
 enum Base {
     DEC = 10,
