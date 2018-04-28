@@ -6,7 +6,7 @@
 class HardwareSerial : public Stream {
 public:	
 	virtual void begin(uint32_t /*inBaudrate*/) {}
-    void write (uint8_t /*inValue*/) override {}
+    size_t write (uint8_t /*inValue*/) override {return 1u;}
 };
 
 extern HardwareSerial Serial; 

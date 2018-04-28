@@ -4,7 +4,7 @@
 
 class StdOutStream : public Print {
 public:
-    void write (uint8_t inValue) override;
+    size_t write (uint8_t inValue) override;
 };
 
 #endif /* end of include guard: STDOUTSTREAM_H__ */
